@@ -1,0 +1,26 @@
+CREATE TABLE MyTable  
+(  
+  MyDecimalColumn DECIMAL(5,2)  
+,MyNumericColumn NUMERIC(10,2)
+,MyMoneyColumn money  
+);  
+ 
+INSERT INTO MyTable VALUES (123.21, 11.25,110);
+INSERT INTO MyTable VALUES (12.12, 12.11,1000);
+INSERT INTO MyTable VALUES (125.12, 12.11,1250);
+INSERT INTO MyTable VALUES (123.213, 11.253,1255.25);
+INSERT INTO MyTable VALUES (123.217, 11.256,1250.99);
+INSERT INTO MyTable VALUES (155.1, 1225.1,1450.999);
+
+INSERT INTO MyTable VALUES (1557.1, 12251225.1,999);
+INSERT INTO MyTable VALUES (1557.1, 122512254.1,1500);
+INSERT INTO MyTable VALUES (155.1, 122512254.1,1699);
+INSERT INTO MyTable VALUES (15.1, 122587412.1,1759);
+INSERT INTO MyTable VALUES (1524.1, 1225.1,1450);
+
+SELECT MyDecimalColumn, MyNumericColumn,MyMoneyColumn  
+FROM MyTable;
+
+select cast(5689.568 as numeric) NumericType;
+select cast(5689.568 as decimal) DecimalType;
+select cast(5689.568 as money) MoneyType;
